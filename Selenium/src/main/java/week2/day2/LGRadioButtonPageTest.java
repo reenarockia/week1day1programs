@@ -20,6 +20,7 @@ public class LGRadioButtonPageTest {
 		//To find the default selected button- result - checked
 		WebElement defaultCheck=driver.findElement(By.xpath("//label[@for='Checked']"));
 		System.out.println("default selected radio button name is: "+ defaultCheck.getText());
+
 		
 		//To select the age group (only if the choice is not selected)
 		List<WebElement> ageGroup=driver.findElements(By.name("age"));
@@ -29,6 +30,21 @@ public class LGRadioButtonPageTest {
 				webElement.click();
 				}
 		}
+		//to confirm whether the given radio button is checked or not
+			List<WebElement> defSelectRadioButtons=driver.findElements(By.xpath("//label[contains(@for,'hecked')]"));
+			System.out.println("Number of Radiobutton elements "+defSelectRadioButtons.size());
+			
+			for (WebElement webElement2 : defSelectRadioButtons) {
+				//System.out.println(webElement2.isSelected());
+				boolean checkStatus=webElement2.isSelected();
+				if(checkStatus==true) {
+					System.out.println(webElement2.getText()+" is selected by default");
+				}else {
+					System.out.println(webElement2.getText()+" is not selected by default");
+				}
+			}
+		}
+		
 	}
 
-}
+
