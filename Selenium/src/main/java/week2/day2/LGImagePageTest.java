@@ -38,22 +38,22 @@ public class LGImagePageTest {
 		WebElement clickByKeyboardMouse=driver.findElement(By.xpath("//img[contains(@onclick,'home.html') and contains(@src,'keyboard.png')]"));
 		
 //		clickByKeyboardMouse.sendKeys(Keys.ENTER); - throwing ElementNotInteractableException.
-		System.out.println(clickByKeyboardMouse.getAttribute("onclick"));
-		String s=clickByKeyboardMouse.getAttribute("onclick");
-		String[] splitList=s.split("'");
-		String s2="";
-		for (String string : splitList) {
-			System.out.println(string);
-			if(string.contains("html")){
-				s2=string;
-			}
-
-		}
-		System.out.println("s2"+s2);
-		clickByKeyboardMouse.sendKeys(Keys.ENTER.valueOf(s2));
-		
+//		System.out.println(clickByKeyboardMouse.getAttribute("onclick"));
+//		String s=clickByKeyboardMouse.getAttribute("onclick");
+//		String[] splitList=s.split("'");
+//		String s2="";
+//		for (String string : splitList) {
+//			System.out.println(string);
+//			if(string.contains("html")){
+//				s2=string;
+//			}
+//
+//		}
+//		System.out.println("s2"+s2);
+//		clickByKeyboardMouse.sendKeys(Keys.ENTER.valueOf(s2));
+//		
 //		System.out.println(clickByKeyboardMouse);
-		driver.getKeyboard();
+//		driver.getKeyboard();
 //		String linkToBeClicked=clickByKeyboardMouse.getAttribute("onclick");
 //		System.out.println(linkToBeClicked);
 //		clickByKeyboardMouse.sendKeys(Keys.ENTER);
