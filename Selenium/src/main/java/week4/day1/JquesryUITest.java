@@ -2,6 +2,7 @@ package week4.day1;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -20,7 +21,8 @@ public class JquesryUITest {
 		ChromeDriver driver=new ChromeDriver();
 		driver.get("https://jqueryui.com/sortable/");
 		driver.manage().window().maximize();
-		Thread.sleep(3000);
+		
+		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
 		
 		driver.switchTo().frame(0);
 		
